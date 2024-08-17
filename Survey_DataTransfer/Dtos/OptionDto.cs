@@ -11,5 +11,6 @@ namespace Survey_DataTransfer.Dtos
         public int IdOption { get; set; }
         public string? Option { get; set; }
         public int QuestionId { get; set; }
+        public bool? IsSelected { get; set; }
     }
 }

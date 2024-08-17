@@ -27,6 +27,7 @@ namespace Survey_DataTransfer.Mappers
                 {
                     IdOption = option.IdOption,
                     Option = option.Option,
+                    IsSelected = option.IsSelected,
                     QuestionId = option.QuestionId,
                 };
                 optionDtos.Add(optionDto);
@@ -148,6 +149,7 @@ namespace Survey_DataTransfer.Mappers
                 {
                     IdOption = option.IdOption,
                     Option = option.Option,
+                    IsSelected = option.IsSelected,
                     QuestionId = option.QuestionId,
                 };
                 options.Add(item);

@@ -90,6 +90,7 @@ namespace Survey_Managment.Services
                                 var option = new OptionModel
                                 {
                                     OptionId = opt.IdOption,
+                                    IsSelected = opt.IsSelected,
                                     Option = opt.Option,
                                 };
                                 options.Add(option);
@@ -157,6 +158,7 @@ namespace Survey_Managment.Services
                         var option = new OptionDto
                         {
                             IdOption = opt.OptionId,
+                            IsSelected = false,
                             Option = opt.Option
                         };
                         optionList.Add(option);
@@ -226,6 +228,7 @@ namespace Survey_Managment.Services
                         var option = new OptionDto
                         {
                             IdOption = opt.OptionId,
+                            IsSelected = opt.IsSelected,
                             Option = opt.Option,
                         };
                         options.Add(option);
