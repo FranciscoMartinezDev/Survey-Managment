@@ -5,8 +5,8 @@
 
 <MudTable Items="@DataList" Hover="true" MultiSelection="true" SelectedItemsChanged="@RowClick" T="SurveyModel" Class="custom-table mt-5">
     <HeaderContent>
-        <MudTh>Titulo</MudTh>
         <MudTh>Codigo</MudTh>
+        <MudTh>Titulo</MudTh>
         <MudTh>Descripción</MudTh>
         <MudTh>Creada</MudTh>
         <MudTh>Desde</MudTh>
@@ -14,8 +14,8 @@
         <MudTh>Estado</MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="Titulo">@context.Title</MudTd>
         <MudTd DataLabel="Titulo">@context.SurveyCode</MudTd>
+        <MudTd DataLabel="Titulo">@context.Title</MudTd>
         <MudTd DataLabel="Descripción">@context.Description</MudTd>
         <MudTd DataLabel="Creada">@context.CreatedDate</MudTd>
         <MudTd DataLabel="Desde">@context.DateFrom</MudTd>

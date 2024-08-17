@@ -16,10 +16,10 @@
 {
     <MudForm>
         <MudRadioGroup @bind-Value="SelectedOption">
-            <MudRadio Value="@("")" Color="Color.Info">1</MudRadio>
-            <MudRadio Value="@("")" Color="Color.Info">2</MudRadio>
-            <MudRadio Value="@("")" Color="Color.Info">3</MudRadio>
-            <MudRadio Value="@("")" Color="Color.Info">4</MudRadio>
+            @foreach (var option in Options)
+            {
+                <MudRadio Value="@(option.Option)" Color="Color.Info">@option.Option</MudRadio>
+            }
         </MudRadioGroup>
     </MudForm>
 }
@@ -27,10 +27,10 @@
 @if (Type == "MultipleAnswer")
 {
     <div class="d-flex">
-        <MudCheckBox @bind-Value="Basic_CheckBox1" Color="Color.Secondary" UncheckedColor="Color.Default">1</MudCheckBox>
-        <MudCheckBox @bind-Value="Basic_CheckBox2" Color="Color.Secondary" UncheckedColor="Color.Default">2</MudCheckBox>
-        <MudCheckBox @bind-Value="Basic_CheckBox3" Color="Color.Secondary" UncheckedColor="Color.Default">3</MudCheckBox>
-        <MudCheckBox @bind-Value="Basic_CheckBox4" Color="Color.Secondary" UncheckedColor="Color.Default">4</MudCheckBox>
+        @foreach (var option in Options)
+        {
+            <MudCheckBox @bind-Value="@option.IsSelected" Color="Color.Secondary" UncheckedColor="Color.Default">@option.Option</MudCheckBox>
+        }
     </div>
 }
 
@@ -41,10 +41,4 @@
     public ICollection<OptionModel>? Options { get; set; }
 
     public string SelectedOption { get; set; }
-
-    public bool Basic_CheckBox1 { get; set; } = false;
-    public bool Basic_CheckBox2 { get; set; } = false;
-    public bool Basic_CheckBox3 { get; set; } = false;
-    public bool Basic_CheckBox4 { get; set; } = false;
-
 }

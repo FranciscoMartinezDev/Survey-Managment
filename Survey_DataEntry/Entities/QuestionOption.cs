@@ -15,6 +15,7 @@ namespace Survey_DataEntry.Entities
         public int IdOption { get; set; }
         public string? Option { get; set; }
         public int QuestionId { get; set; }
+        public bool? IsSelected { get; set; }
 
         [ForeignKey("QuestionId")]
         public virtual SurveyQuestion? Question { get; set; }
