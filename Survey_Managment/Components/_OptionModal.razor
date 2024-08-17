@@ -1,0 +1,45 @@
+﻿@using Survey_Managment.ViewModel;
+
+<MudDialog>
+    <DialogContent>
+        <div class="modal-body">
+            <div class="option-adder d-flex align-start justify-center">
+                <MudButton Color="@Color.Info"
+                           Variant="Variant.Outlined"
+                           OnClick="@Question.PushOption"
+                           StartIcon="@Icons.Material.Filled.AddCircleOutline">Agregar</MudButton>
+            </div>
+            <MudDivider />
+            <div class="option-list py-4">
+                @foreach (var item in Question.Options)
+                {
+                    <div class="option d-flex align-center py-2 gap-2">
+                        <MudTextField @bind-Value="item.Option"
+                                      Label="Opción"
+                                      Margin="Margin.Dense"
+                                      Variant="Variant.Outlined" />
+                        <MudButton Color="@Color.Error"
+                                   Variant="Variant.Filled"
+                                   OnClick="()=>{Question.QuitOption(item);}">
+                            <MudIcon Icon="@Icons.Material.Filled.Delete" />
+                        </MudButton>
+                    </div>
+                }
+            </div>
+        </div>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Color="@Color.Tertiary"
+                   Variant="Variant.Filled"
+                   OnClick="@CloseModal">Aplicar</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    private MudDialogInstance MudDialog { get; set; }
+    [Parameter]
+    public QuestionModel Question { get; set; }
+
+    public void CloseModal() => MudDialog.Close();
+}

@@ -1,0 +1,14 @@
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\bin\Debug\net7.0\Survey_DataEntry.deps.json
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\bin\Debug\net7.0\Survey_DataEntry.runtimeconfig.json
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\bin\Debug\net7.0\Survey_DataEntry.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\bin\Debug\net7.0\Survey_DataEntry.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.csproj.AssemblyReference.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.AssemblyInfoInputs.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.AssemblyInfo.cs
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\refint\Survey_DataEntry.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\Survey_DataEntry.genruntimeconfig.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataEntry\obj\Debug\net7.0\ref\Survey_DataEntry.dll

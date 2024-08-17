@@ -1,0 +1,68 @@
+is_global = true
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudIllegalParameters = 
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Survey_Managment
+build_property.RootNamespace = Survey_Managment
+build_property.ProjectDir = C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Managment\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Managment
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Components/DataTable.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXRhVGFibGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Components/LoadingBar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMb2FkaW5nQmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Components/QuestionItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xRdWVzdGlvbkl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Components/QuestionList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xRdWVzdGlvbkxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Components/QuestionTypes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xRdWVzdGlvblR5cGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Components/_OptionModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfT3B0aW9uTW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Pages/Info.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/Pages/Survey.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VydmV5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Francisco/Documents/trabalo/Repos/Survey_Managment/Survey_Managment/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

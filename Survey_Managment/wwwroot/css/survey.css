@@ -1,0 +1,130 @@
+﻿:root {
+    --light-gray: #BDBDBD;
+    --ingigo-color: #7986CB;
+}
+
+header {
+    box-shadow: 0 0 5px 2px var(--light-gray);
+}
+
+.survey-data,
+.survey-adder {
+    border-bottom: 1px solid var(--light-gray)
+}
+
+.survey-data {
+    display: grid;
+    grid-template-areas:
+        "title datefrom dateto"
+        "description description description";
+}
+
+.survey-title {
+    grid-area: title;
+    width: 100%;
+}
+
+.survey-datefrom {
+    grid-area: datefrom;
+    width: 100%;
+}
+
+.survey-dateto {
+    grid-area: dateto;
+    width: 100%;
+}
+
+.survey-description {
+    grid-area: description;
+    width: 100%;
+}
+
+.list {
+    border: 1px solid var(--light-gray);
+    height: 400px;
+    overflow-y: auto;
+}
+
+.question-item {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.modal-body {
+    height: 300px;
+}
+
+.option-adder {
+    height: 15%;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+    .option-adder button {
+        width: 100%;
+    }
+
+.option-list {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+.option {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.custom-table th {
+    background-color: var(--ingigo-color);
+    color: white !important;
+    font-size: 17px;
+}
+
+.loading {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    margin: auto;
+}
+
+    .loading div {
+        width: 25px;
+        height: 50px;
+        background-color: var(--ingigo-color) !important;
+        animation: loading 1s infinite;
+    }
+
+        .loading div + div {
+            animation-delay: 0.2s;
+        }
+
+            .loading div + div + div {
+                animation-delay: 0.4s;
+            }
+
+@keyframes loading {
+    0% {
+        height: 30px;
+    }
+
+    50% {
+        height: 50px;
+    }
+
+    100% {
+        height: 30px;
+    }
+}
+/* ============================================================= Survey =============================================================*/
+
+header.survey-header {
+    box-shadow: none !important;
+    height: 100px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.question{
+    min-height: 100px;
+    border-bottom: 1px solid var(--light-gray);
+}

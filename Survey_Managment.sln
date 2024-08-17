@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey_Managment", "Survey_Managment\Survey_Managment.csproj", "{1191C58C-3690-4E93-A635-BD5C0EBC10B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey_Controller", "Survey_Controller\Survey_Controller.csproj", "{87686A8E-9FA0-4B10-AF67-0B60447979F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey_DataTransfer", "Survey_DataTransfer\Survey_DataTransfer.csproj", "{F256E288-96F6-4539-A0D2-6C2663D82398}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey_DataEntry", "Survey_DataEntry\Survey_DataEntry.csproj", "{1B50A645-B4B3-4FD1-9E07-74DD5564D2F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey_Repository", "Survey_Repository\Survey_Repository.csproj", "{E8ACC646-1DE3-4B87-A843-972E9B0FDEE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey_Services", "Survey_Services\Survey_Services.csproj", "{FB512120-F380-4B36-A4FE-AF416040A065}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1191C58C-3690-4E93-A635-BD5C0EBC10B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1191C58C-3690-4E93-A635-BD5C0EBC10B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1191C58C-3690-4E93-A635-BD5C0EBC10B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1191C58C-3690-4E93-A635-BD5C0EBC10B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87686A8E-9FA0-4B10-AF67-0B60447979F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87686A8E-9FA0-4B10-AF67-0B60447979F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87686A8E-9FA0-4B10-AF67-0B60447979F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87686A8E-9FA0-4B10-AF67-0B60447979F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F256E288-96F6-4539-A0D2-6C2663D82398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F256E288-96F6-4539-A0D2-6C2663D82398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F256E288-96F6-4539-A0D2-6C2663D82398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F256E288-96F6-4539-A0D2-6C2663D82398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B50A645-B4B3-4FD1-9E07-74DD5564D2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B50A645-B4B3-4FD1-9E07-74DD5564D2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B50A645-B4B3-4FD1-9E07-74DD5564D2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B50A645-B4B3-4FD1-9E07-74DD5564D2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8ACC646-1DE3-4B87-A843-972E9B0FDEE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8ACC646-1DE3-4B87-A843-972E9B0FDEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8ACC646-1DE3-4B87-A843-972E9B0FDEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8ACC646-1DE3-4B87-A843-972E9B0FDEE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB512120-F380-4B36-A4FE-AF416040A065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB512120-F380-4B36-A4FE-AF416040A065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB512120-F380-4B36-A4FE-AF416040A065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB512120-F380-4B36-A4FE-AF416040A065}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5671EF2-C069-46FB-9585-80E8ED5B5ECA}
+	EndGlobalSection
+EndGlobal

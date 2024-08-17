@@ -1,0 +1,97 @@
+﻿@page "/Info/{parameter?}"
+@using Survey_Managment.ViewModel;
+@using Survey_Managment.Components;
+@using Survey_Managment.Services;
+@inject NavigationManager Navigation;
+@inject IDialogService DialogService;
+@inject ISnackbar SnackBar;
+
+<header class="d-flex align-center pa-4 gap-4">
+    <h1 class="mr-auto">@Header</h1>
+    <MudButton Variant="Variant.Outlined"
+               Color="Color.Info"
+               StartIcon="@Icons.Material.Filled.ArrowBackIosNew"
+               Href="/">Volver</MudButton>
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Info"
+               StartIcon="@Icons.Material.Filled.Save"
+               OnClick="@Save">Guardar</MudButton>
+</header>
+<main>
+    <section class="survey-data pa-4 gap-4">
+        <MudTextField @bind-Value="@Survey.Title"
+                      Class="survey-title"
+                      Label="Titulo"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense" />
+        <MudTextField @bind-Value="@Survey.DateFrom"
+                      Class="survey-datefrom"
+                      T="DateTime"
+                      Format="s"
+                      Label="Desde"
+                      InputType="InputType.DateTimeLocal"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense" />
+        <MudTextField @bind-Value="@Survey.DateTo"
+                      Class="survey-dateto"
+                      T="DateTime"
+                      Format="s"
+                      Label="Hasta"
+                      InputType="InputType.DateTimeLocal"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense" />
+        <MudTextField @bind-Value="@Survey.Description"
+                      Class="survey-description"
+                      T="string"
+                      Label="Descripción"
+                      Variant="Variant.Outlined"
+                      Lines="5" />
+    </section>
+    <section class="survey-adder pa-4 d-flex align-center justify-end">
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Tertiary"
+                   StartIcon="@Icons.Material.Filled.AddCircleOutline"
+                   OnClick="()=>{Survey.AddQuestion();}">Pregunta</MudButton>
+    </section>
+    <QuestionList Survey="@Survey" />
+</main>
+
+@code {
+    [Parameter]
+    public string? parameter { get; set; }
+    public string? Header { get; set; }
+
+    public SurveyModel Survey { get; set; }
+    public SurveyClient Client { get; set; }
+
+    protected override async void OnInitialized()
+    {
+        Header = parameter == null ? "Nueva Encuesta" : "Editar Encuesta";
+        Client = new SurveyClient(Navigation, DialogService, SnackBar);
+        Survey = new SurveyModel();
+        Survey.Questions = new List<QuestionModel>();
+        await GetData();
+        StateHasChanged();
+    }
+
+    public async Task GetData()
+    {
+        if (parameter != null)
+        {
+            var dbSurvey = await Client.SurveyByCode(parameter);
+            Survey = dbSurvey;
+        }
+    }
+
+    public async void Save()
+    {
+        if (parameter == null)
+        {
+            await Client.SaveSurvey(Survey);
+        }
+        else
+        {
+            await Client.UpdateSurvey(Survey, parameter);
+        }
+    }
+}

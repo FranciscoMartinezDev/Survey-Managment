@@ -1,0 +1,61 @@
+﻿@page "/Survey/{parameter}"
+@using Survey_Managment.Services;
+@using Survey_Managment.ViewModel;
+@using Survey_Managment.Components;
+@inject NavigationManager navigationManager;
+@inject IDialogService dialogService;
+@inject ISnackbar snackBar;
+
+@if (!inLoading)
+{
+    <MudPaper Style="box-shadow: none;">
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge">
+            <header class="survey-header d-flex align-start justify-center flex-column gap-2 mb-2">
+                <h1>@SurveyData?.Title</h1>
+                <p>@SurveyData?.Description</p>
+            </header>
+            <main class="d-flex flex-column py-2 px-8">
+                @foreach (var quest in SurveyData.Questions)
+                {
+                    <article class="question d-flex justify-center flex-column py-3 gap-2">
+                        <strong>@quest.Question</strong>
+                        <QuestionTypes Type="@quest.Type"/>
+                    </article>
+                }
+            </main>
+            <footer class="d-flex align-center justify-end px-4">
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           StartIcon="@Icons.Material.Filled.CheckCircleOutline">Enviar</MudButton>
+            </footer>
+        </MudContainer>
+    </MudPaper>
+}
+else
+{
+    <LoadingBar />
+}
+
+
+@code {
+    [Parameter]
+    public string? parameter { get; set; }
+
+    public SurveyModel? SurveyData { get; set; }
+    private SurveyClient client { get; set; }
+    private bool inLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        client = new SurveyClient(navigationManager, dialogService, snackBar);
+        SurveyData = new SurveyModel();
+        await GetData();
+    }
+
+    private async Task GetData()
+    {
+        var result = await client.SurveyByCode(parameter);
+        SurveyData = result;
+        inLoading = false;
+    }
+}

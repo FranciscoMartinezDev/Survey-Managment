@@ -1,0 +1,50 @@
+﻿@using Survey_Managment.ViewModel;
+
+@if (Type == "RatedByPoints")
+{
+    <MudRating SelectedValue="5"
+               MaxValue="10"
+               FullIcon="@Icons.Material.Filled.Favorite"
+               EmptyIcon="@Icons.Material.Filled.FavoriteBorder"
+               Color="Color.Secondary" />
+}
+@if (Type == "FreeAnswer")
+{
+    <MudTextField T="string" Label="Respuesta Libre" Variant="Variant.Outlined" Lines="5" />
+}
+@if (Type == "MultipleChoice")
+{
+    <MudForm>
+        <MudRadioGroup @bind-Value="SelectedOption">
+            <MudRadio Value="@("")" Color="Color.Info">1</MudRadio>
+            <MudRadio Value="@("")" Color="Color.Info">2</MudRadio>
+            <MudRadio Value="@("")" Color="Color.Info">3</MudRadio>
+            <MudRadio Value="@("")" Color="Color.Info">4</MudRadio>
+        </MudRadioGroup>
+    </MudForm>
+}
+
+@if (Type == "MultipleAnswer")
+{
+    <div class="d-flex">
+        <MudCheckBox @bind-Value="Basic_CheckBox1" Color="Color.Secondary" UncheckedColor="Color.Default">1</MudCheckBox>
+        <MudCheckBox @bind-Value="Basic_CheckBox2" Color="Color.Secondary" UncheckedColor="Color.Default">2</MudCheckBox>
+        <MudCheckBox @bind-Value="Basic_CheckBox3" Color="Color.Secondary" UncheckedColor="Color.Default">3</MudCheckBox>
+        <MudCheckBox @bind-Value="Basic_CheckBox4" Color="Color.Secondary" UncheckedColor="Color.Default">4</MudCheckBox>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string? Type { get; set; }
+    [Parameter]
+    public ICollection<OptionModel>? Options { get; set; }
+
+    public string SelectedOption { get; set; }
+
+    public bool Basic_CheckBox1 { get; set; } = false;
+    public bool Basic_CheckBox2 { get; set; } = false;
+    public bool Basic_CheckBox3 { get; set; } = false;
+    public bool Basic_CheckBox4 { get; set; } = false;
+
+}

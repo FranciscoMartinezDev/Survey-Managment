@@ -1,0 +1,109 @@
+﻿@using MudBlazor;
+@using Survey_Managment.Services;
+@using Survey_Managment.ViewModel;
+@using Survey_Managment.Components;
+@inject NavigationManager Navigation;
+@inject IDialogService DialogService;
+@inject ISnackbar SnackBar;
+@page "/"
+
+
+<header class="d-flex align-center pa-4 gap-4">
+    <h1 class="mr-auto">Encuestas</h1>
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Tertiary"
+               StartIcon="@Icons.Material.Filled.AddCircleOutline"
+               Href="/Info">Nueva</MudButton>
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Warning"
+               StartIcon="@Icons.Material.Filled.Edit"
+               OnClick="@Edit">Editar</MudButton>
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Secondary"
+               StartIcon="@Icons.Material.Filled.CheckCircleOutline"
+               OnClick="@Active">Activar</MudButton>
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Primary"
+               StartIcon="@Icons.Material.Filled.DoNotDisturbAlt"
+               OnClick="@Deactive">Desactivar</MudButton>
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Info"
+               StartIcon="@Icons.Material.Filled.SpeakerNotes"
+               OnClick="@GoSurvey">Encuesta</MudButton>
+</header>
+<main class="pa-5">
+    @if (inLoading)
+    {
+        <LoadingBar />
+    }
+    else
+    {
+        <DataTable DataList="Model" OnRowClick="@HandleRowData" />
+    }
+</main>
+
+@code {
+    public SurveyClient Client { get; set; }
+    ICollection<SurveyModel> Model { get; set; }
+    private List<SurveyModel> SurveyHandled { get; set; }
+    private bool inLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Client = new SurveyClient(Navigation, DialogService, SnackBar);
+        Model = new List<SurveyModel>();
+        SurveyHandled = new List<SurveyModel>();
+        await GetData();
+    }
+
+    private async Task GetData()
+    {
+        var result = await Client.AllSurveys();
+        Model = result;
+        inLoading = false;
+    }
+
+    private void HandleRowData(List<SurveyModel> surveys)
+    {
+        SurveyHandled = surveys;
+    }
+
+    private void ValidateRowHandler(Action action)
+    {
+        if (SurveyHandled.Count > 0)
+        {
+            if (SurveyHandled.Count < 2)
+            {
+                action.Invoke();
+            }
+            else
+            {
+                SnackBar.Add("Debe selecciona un solo registro", Severity.Error);
+            }
+        }
+        else
+        {
+            SnackBar.Add("Debe selecciona al menos un registro", Severity.Error);
+        }
+    }
+
+    private void Edit()
+    {
+        ValidateRowHandler(() => { Navigation.NavigateTo($"/Info/{SurveyHandled.First().SurveyCode}"); });
+    }
+
+    private void Active()
+    {
+        ValidateRowHandler(async () => { await Client.Active(SurveyHandled.First().SurveyCode); });
+    }
+
+    private void Deactive()
+    {
+        ValidateRowHandler(async () => { await Client.Deactive(SurveyHandled.First().SurveyCode); });
+    }
+
+    private void GoSurvey()
+    {
+        ValidateRowHandler(() => { Navigation.NavigateTo($"/Survey/{SurveyHandled.First().SurveyCode}"); });
+    }
+}

@@ -1,0 +1,57 @@
+﻿@using MudBlazor;
+@using Survey_Managment.ViewModel;
+@using Survey_Managment.Actions;
+@using Survey_Managment.Components;
+
+<MudTable Items="@DataList" Hover="true" MultiSelection="true" SelectedItemsChanged="@RowClick" T="SurveyModel" Class="custom-table mt-5">
+    <HeaderContent>
+        <MudTh>Titulo</MudTh>
+        <MudTh>Codigo</MudTh>
+        <MudTh>Descripción</MudTh>
+        <MudTh>Creada</MudTh>
+        <MudTh>Desde</MudTh>
+        <MudTh>Hasta</MudTh>
+        <MudTh>Estado</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Titulo">@context.Title</MudTd>
+        <MudTd DataLabel="Titulo">@context.SurveyCode</MudTd>
+        <MudTd DataLabel="Descripción">@context.Description</MudTd>
+        <MudTd DataLabel="Creada">@context.CreatedDate</MudTd>
+        <MudTd DataLabel="Desde">@context.DateFrom</MudTd>
+        <MudTd DataLabel="Hasta">@context.DateTo</MudTd>
+        <MudTd DataLabel="Estado">
+            @if (context.IsActivated)
+            {
+                <div class="py-1 px-2 gap-2 d-flex align-center justify-start" style="border-radius: 5px; background-color: #19A98C;">
+                    <MudIcon Icon="@Icons.Material.Filled.Check" Style="color:white;" />
+                    <strong style="color:white;">Activa</strong>
+                </div>
+            }
+            else
+            {
+                <div class="py-1 px-2 gap-2 d-flex align-center justify-start" style="border-radius: 5px;background-color: #F44D40;">
+                    <MudIcon Icon="@Icons.Material.Filled.DoNotDisturbAlt" Style="color:white;" />
+                    <strong Style="color:white;">Inactiva</strong>
+                </div>
+            }
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager PageSizeOptions="new int[] { 10, 25, 50, 100 }" />
+    </PagerContent>
+</MudTable>
+
+@code {
+    [Parameter]
+    public ICollection<SurveyModel> DataList { get; set; }
+    [Parameter]
+    public EventCallback<List<SurveyModel>> OnRowClick { get; set; }
+
+    private HashSet<SurveyModel> _selectedItem { get; set; }
+
+    private async void RowClick(HashSet<SurveyModel> surveys)
+    {
+        await OnRowClick.InvokeAsync(surveys.ToList());
+    }
+}

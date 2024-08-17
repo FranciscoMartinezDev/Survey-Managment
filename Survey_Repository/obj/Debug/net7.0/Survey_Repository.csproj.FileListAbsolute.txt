@@ -1,0 +1,17 @@
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\bin\Debug\net7.0\Survey_Repository.deps.json
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\bin\Debug\net7.0\Survey_Repository.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\bin\Debug\net7.0\Survey_Repository.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\bin\Debug\net7.0\Survey_DataEntry.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\bin\Debug\net7.0\Survey_DataTransfer.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\bin\Debug\net7.0\Survey_DataEntry.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\bin\Debug\net7.0\Survey_DataTransfer.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.csproj.AssemblyReference.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.AssemblyInfoInputs.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.AssemblyInfo.cs
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.csproj.CopyComplete
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\refint\Survey_Repository.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\Survey_Repository.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_Repository\obj\Debug\net7.0\ref\Survey_Repository.dll

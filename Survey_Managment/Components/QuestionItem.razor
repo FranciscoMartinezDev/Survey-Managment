@@ -1,0 +1,61 @@
+﻿@using MudBlazor;
+@using Survey_Managment.ViewModel;
+@inject IDialogService DialogService
+
+<div class="question-item d-flex align-center pa-4 gap-4">
+    <MudTextField @bind-Value="@Question.Question"
+                  Label="Pregunta"
+                  Variant="Variant.Outlined"
+                  Margin="Margin.Dense" />
+    <MudSelect @bind-Value="Question.Type"
+               T="string"
+               Label="Tipo de pregunta"
+               AnchorOrigin="Origin.BottomCenter"
+               Variant="Variant.Outlined"
+               Margin="Margin.Dense" Clearable>
+        @foreach (var item in Options)
+        {
+            <MudSelectItem Value="@item.Key">@item.Value</MudSelectItem>
+        }
+    </MudSelect>
+    @if (Question.Type == "MultipleChoice" || Question.Type == "MultipleAnswer")
+    {
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Tertiary"
+                   OnClick="OpenModal">Opciones</MudButton>
+    }
+    <MudButton Variant="Variant.Filled"
+               StartIcon="@Icons.Material.Filled.Delete"
+               Color="Color.Error"
+               OnClick="Quit">Quitar</MudButton>
+</div>
+
+@code {
+    [Parameter]
+    public QuestionModel Question { get; set; }
+    [Parameter]
+    public EventCallback onDelete { get; set; }
+
+    Dictionary<string, string> Options = new Dictionary<string, string>
+    {
+        { "RatedByPoints", "Valoración por puntos" },
+        { "FreeAnswer", "Respuesta Libre" },
+        { "MultipleChoice", "Opción Multiple" },
+        { "MultipleAnswer", "Respuesta Multiple" },
+    };
+
+    public async Task Quit()
+    {
+        await onDelete.InvokeAsync();
+    }
+
+    public void OpenModal()
+    {
+        string modalHeader = Question.Type == "MultipleChoice" ? "Opción Multiple" : "Respuesta Multiple";
+        var options = new DialogOptions() { Position = DialogPosition.TopCenter, MaxWidth = MaxWidth.ExtraSmall, FullWidth = true };
+        DialogParameters<_OptionModal> parameters = new DialogParameters<_OptionModal>();
+        parameters.Add("Question", Question);
+        DialogService.ShowAsync<_OptionModal>(modalHeader, parameters, options);
+    }
+
+}

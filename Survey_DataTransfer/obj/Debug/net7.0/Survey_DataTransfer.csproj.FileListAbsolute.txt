@@ -1,0 +1,15 @@
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\bin\Debug\net7.0\Survey_DataTransfer.deps.json
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\bin\Debug\net7.0\Survey_DataTransfer.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\bin\Debug\net7.0\Survey_DataTransfer.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\bin\Debug\net7.0\Survey_DataEntry.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\bin\Debug\net7.0\Survey_DataEntry.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.csproj.AssemblyReference.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.AssemblyInfoInputs.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.AssemblyInfo.cs
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.csproj.CopyComplete
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\refint\Survey_DataTransfer.dll
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\Survey_DataTransfer.pdb
+C:\Users\Francisco\Documents\trabalo\Repos\Survey_Managment\Survey_DataTransfer\obj\Debug\net7.0\ref\Survey_DataTransfer.dll

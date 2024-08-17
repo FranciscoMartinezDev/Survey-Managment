@@ -1,0 +1,24 @@
+﻿@using MudBlazor
+@using Survey_Managment.ViewModel
+
+<section class="question-list pa-4">
+    <div class="list">
+        @if (Survey.Questions.Count > 0)
+        {
+            @foreach (var question in Survey.Questions)
+            {
+                <QuestionItem Question="@question" onDelete="()=>{ QuitQuestion(question); }" />
+            }
+        }
+    </div>
+</section>
+
+@code {
+    [Parameter]
+    public SurveyModel Survey { get; set; }
+
+    private void QuitQuestion(QuestionModel question)
+    {
+        Survey.QuitQuestion(question);
+    }
+}
